@@ -1,5 +1,6 @@
 let startBtn = document.querySelector('#start-btn');
 let stopBtn = document.querySelector('#stop-btn');
+let intervalFunc;
 
 function startTimer() {
     let interval = document.querySelector('#time').value;
@@ -8,7 +9,7 @@ function startTimer() {
         return;
     }
     startBtn.disabled = true;
-    setInterval(alert('Timer completed.') , interval);
+    intervalFunc = setInterval(() => alert('Timer completed.') , interval * 1000);
 }
 
 function stopTimer() {
