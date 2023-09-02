@@ -13,7 +13,7 @@ function startTimer() {
 }
 
 function stopTimer() {
-    clearInterval(startTimer)
+    clearInterval(intervalFunc)
     startBtn.removeAttribute('disabled');
 }
 
